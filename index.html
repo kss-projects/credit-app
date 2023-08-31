@@ -1,199 +1,120 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Credit Application</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-
-<body>
-    <div class="slideshow">
-        <div class="slide" style="background-image: url('https://www.rwdoors.com/wp-content/uploads/2022/01/Contemporary-Flush-2C.webp')"></div>
-        <div class="slide" style="background-image: url('https://www.rwdoors.com/wp-content/uploads/2022/01/Grandview3.webp')"></div>
-        <div class="slide" style="background-image: url('https://www.rwdoors.com/wp-content/uploads/2022/01/Premium_Ranch.webp')"></div>
-    </div>
-    <form id="creditApplicationForm">
-        <div class="section" id="section1">
-            <h2>Personal Details</h2>
-            <div class="left">
-                <label for="companyName">Company Name (Required)</label>
-                <input type="text" id="companyName" name="companyName" required>
-            </div>
-            <div class="left">
-                <label for="address">Address (Required)</label>
-                <input type="text" id="address" name="address" required>
-            </div>
-            <div class="clear">&nbsp;</div>
-            <div class="left">
-                <label for="city">City (Required)</label>
-                <input type="text" id="city" name="city" required>
-            </div>
-            <div class="left">
-                <label for="state">State (Required)</label>
-                <input type="text" id="state" name="state" required>
-            </div>
-            <div class="clear">&nbsp;</div>
-            <div class="left">
-                <label for="zip">Zip (Required)</label>
-                <input type="text" id="zip" name="zip" required>
-            </div>
-            <div class="left">
-                <label for="telephone">Telephone (Required)</label>
-                <input type="text" id="telephone" name="telephone" required>
-            </div>
-            <div class="clear">&nbsp;</div>
-            <div class="buttons">
-                <button type="button" class="reset">Reset</button>
-                <button type="button" id="next1">Next</button>
-            </div>
-        </div>
-    </form>
-
-    <script src="script.js"></script>
-</body>
-
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Credit Application</title>
+    <title>R-W Credit Check Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="form-container">
-        <form id="creditApplicationForm">
+    <form id="creditCheckForm">
+        <!-- Page 1 -->
+        <div class="form-page" id="page1">
+            <!-- Company Information -->
             <div class="form-section">
+                <h2>Company Information</h2>
                 <div class="form-column">
                     <label for="companyName">Company Name:</label>
-                    <input type="text" id="companyName" name="companyName" placeholder="Company Name">
-            
-                    <label for="legalName">Legal Name (If Different from Above):</label>
-                    <input type="text" id="legalName" name="legalName" placeholder="Legal Name">
-                </div>
-                <div class="form-column">
-                    <label for="businessNumberOrTaxId">Canadian Business Number or US Federal Tax ID:</label>
-                    <select id="businessNumberOrTaxId" name="businessNumberOrTaxId">
-                        <option value="CanadianBusinessNumber">Canadian Business Number</option>
-                        <option value="USFederalTaxId">US Federal Tax ID</option>
-                    </select>
-                    
-                    <input type="text" id="businessNumberOrTaxIdValue" name="businessNumberOrTaxIdValue" placeholder="Enter Canadian Business Number or US Federal Tax ID">
-                </div>
-            </div>
-            <div class="form-section">
-                <div class="form-column">
+                    <input type="text" id="companyName" name="companyName" placeholder="Company Name" required>
+
+                    <label for="legalName">Legal Name:</label>
+                    <input type="text" id="legalName" name="legalName" placeholder="Legal Name" required>
+
+                    <label for="businessNumber">Business Number (Canadian Businesses):</label>
+                    <input type="text" id="businessNumber" name="businessNumber" placeholder="#BN" required>
+
+                    <label for="federalTaxID">Federal Tax ID (US Businesses):</label>
+                    <input type="text" id="federalTaxID" name="federalTaxID" placeholder="Federal Tax ID" required>
+
                     <label for="billingAddress">Billing Address:</label>
-                    <input type="text" id="billingAddress" name="billingAddress" placeholder="Street Address 1">
+                    <input type="text" id="billingAddress" name="billingAddress" placeholder="Street Address 1" required>
                     <input type="text" id="billingAddress2" name="billingAddress2" placeholder="Street Address 2 (Optional)">
                 </div>
                 <div class="form-column">
-                    <label for="country">Country:</label>
-                    <select id="country" name="country">
-                        <option value="Canada">Canada</option>
-                        <option value="United States">United States</option>
-                    </select>
-                    
-                    <label for="state">State:</label>
-                    <select id="state" name="state">
-                        <!-- State options will be populated based on the selected country -->
-                    </select>
-                </div>
-            </div>
-            <div class="form-section">
-                <div class="form-column">
-                    <label for="city">City:</label>
-                    <input type="text" id="city" name="city" placeholder="City">
-                    
                     <label for="website">Website:</label>
-                    <input type="url" id="website" name="website" placeholder="Website">
-                    
+                    <input type="url" id="website" name="website" placeholder="Website" required>
+
                     <label for="creditLimitRequested">Credit Limit Requested:</label>
-                    <input type="text" id="creditLimitRequested" name="creditLimitRequested" placeholder="Credit Limit Requested">
-                    
+                    <input type="text" id="creditLimitRequested" name="creditLimitRequested" placeholder="Credit Limit Requested" required>
+
                     <label for="yearsInBusiness">Number of Years in Business:</label>
-                    <input type="number" id="yearsInBusiness" name="yearsInBusiness" placeholder="Number of Years in Business">
-                </div>
-                <div class="form-column">
-                    <label for="involvedInBankruptcy">Have You Ever Been Involved in Bankruptcy?</label>
-                    <select id="involvedInBankruptcy" name="involvedInBankruptcy">
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
+                    <input type="number" id="yearsInBusiness" name="yearsInBusiness" placeholder="Number of Years in Business" required>
+
+                    <label for="bankruptcy">Have you ever been involved in bankruptcy?</label>
+                    <select id="bankruptcy" name="bankruptcy" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
                     </select>
-                    
-                    <label for="bankruptcyDetails">If Yes, Please State the Name of Company and the Date of Bankruptcy:</label>
-                    <input type="text" id="bankruptcyDetails" name="bankruptcyDetails" placeholder="Name of Company and Date of Bankruptcy">
+
+                    <label for="bankruptcyDetails">If yes, please state the name of the company and the date of bankruptcy:</label>
+                    <input type="text" id="bankruptcyDetails" name="bankruptcyDetails" placeholder="Company and Date of Bankruptcy">
                 </div>
             </div>
             <!-- Name of Principals -->
             <div class="form-section">
+                <h2>Name of Principals</h2>
+                <!-- Principal 1 -->
                 <div class="form-column">
-                    <h3>Name of Principal 1</h3>
-                    <label for="principal1Name">Full Name:</label>
-                    <input type="text" id="principal1Name" name="principal1Name" placeholder="Full Name">
-                    
+                    <h3>Principal 1</h3>
+                    <label for="principal1FullName">Full Name:</label>
+                    <input type="text" id="principal1FullName" name="principal1FullName" placeholder="Full Name" required>
+
                     <label for="principal1Title">Title:</label>
-                    <input type="text" id="principal1Title" name="principal1Title" placeholder="Title">
-                    
+                    <input type="text" id="principal1Title" name="principal1Title" placeholder="Title" required>
+
                     <label for="principal1Address">Address:</label>
-                    <input type="text" id="principal1Address" name="principal1Address" placeholder="Street Address 1">
+                    <input type="text" id="principal1Address" name="principal1Address" placeholder="Street Address 1" required>
                     <input type="text" id="principal1Address2" name="principal1Address2" placeholder="Street Address 2 (Optional)">
                 </div>
                 <div class="form-column">
                     <label for="principal1Email">Email Address:</label>
-                    <input type="email" id="principal1Email" name="principal1Email" placeholder="Email Address">
-                    
+                    <input type="email" id="principal1Email" name="principal1Email" placeholder="Email Address" required>
+
                     <label for="principal1Telephone">Telephone:</label>
-                    <input type="tel" id="principal1Telephone" name="principal1Telephone" placeholder="Telephone">
+                    <input type="tel" id="principal1Telephone" name="principal1Telephone" placeholder="Telephone" required>
                 </div>
-            </div>
-            <div class="form-section">
+                <!-- Principal 2 -->
                 <div class="form-column">
-                    <h3>Name of Principal 2</h3>
-                    <label for="principal2Name">Full Name:</label>
-                    <input type="text" id="principal2Name" name="principal2Name" placeholder="Full Name">
-                    
+                    <h3>Principal 2</h3>
+                    <label for="principal2FullName">Full Name:</label>
+                    <input type="text" id="principal2FullName" name="principal2FullName" placeholder="Full Name" required>
+
                     <label for="principal2Title">Title:</label>
-                    <input type="text" id="principal2Title" name="principal2Title" placeholder="Title">
-                    
+                    <input type="text" id="principal2Title" name="principal2Title" placeholder="Title" required>
+
                     <label for="principal2Address">Address:</label>
-                    <input type="text" id="principal2Address" name="principal2Address" placeholder="Street Address 1">
+                    <input type="text" id="principal2Address" name="principal2Address" placeholder="Street Address 1" required>
                     <input type="text" id="principal2Address2" name="principal2Address2" placeholder="Street Address 2 (Optional)">
                 </div>
                 <div class="form-column">
                     <label for="principal2Email">Email Address:</label>
-                    <input type="email" id="principal2Email" name="principal2Email" placeholder="Email Address">
-                    
+                    <input type="email" id="principal2Email" name="principal2Email" placeholder="Email Address" required>
+
                     <label for="principal2Telephone">Telephone:</label>
-                    <input type="tel" id="principal2Telephone" name="principal2Telephone" placeholder="Telephone">
+                    <input type="tel" id="principal2Telephone" name="principal2Telephone" placeholder="Telephone" required>
                 </div>
-            </div>
-            <div class="form-section">
+                <!-- Principal 3 -->
                 <div class="form-column">
-                    <h3>Name of Principal 3</h3>
-                    <label for="principal3Name">Full Name:</label>
-                    <input type="text" id="principal3Name" name="principal3Name" placeholder="Full Name">
-                    
+                    <h3>Principal 3</h3>
+                    <label for="principal3FullName">Full Name:</label>
+                    <input type="text" id="principal3FullName" name="principal3FullName" placeholder="Full Name" required>
+
                     <label for="principal3Title">Title:</label>
-                    <input type="text" id="principal3Title" name="principal3Title" placeholder="Title">
-                    
+                    <input type="text" id="principal3Title" name="principal3Title" placeholder="Title" required>
+
                     <label for="principal3Address">Address:</label>
-                    <input type="text" id="principal3Address" name="principal3Address" placeholder="Street Address 1">
+                    <input type="text" id="principal3Address" name="principal3Address" placeholder="Street Address 1" required>
                     <input type="text" id="principal3Address2" name="principal3Address2" placeholder="Street Address 2 (Optional)">
                 </div>
                 <div class="form-column">
                     <label for="principal3Email">Email Address:</label>
-                    <input type="email" id="principal3Email" name="principal3Email" placeholder="Email Address">
-                    
+                    <input type="email" id="principal3Email" name="principal3Email" placeholder="Email Address" required>
+
                     <label for="principal3Telephone">Telephone:</label>
-                    <input type="tel" id="principal3Telephone" name="principal3Telephone" placeholder="Telephone">
+                    <input type="tel" id="principal3Telephone" name="principal3Telephone" placeholder="Telephone" required>
                 </div>
             </div>
             <!-- Accounts Payable Contact -->
@@ -201,60 +122,54 @@
                 <div class="form-column">
                     <h3>Accounts Payable Contact</h3>
                     <label for="accountsPayableContactName">Name:</label>
-                    <input type="text" id="accountsPayableContactName" name="accountsPayableContactName" placeholder="Name">
-                    
+                    <input type="text" id="accountsPayableContactName" name="accountsPayableContactName" placeholder="Name" required>
+
                     <label for="accountsPayableContactPhone">Phone Number:</label>
-                    <input type="tel" id="accountsPayableContactPhone" name="accountsPayableContactPhone" placeholder="Phone Number">
+                    <input type="tel" id="accountsPayableContactPhone" name="accountsPayableContactPhone" placeholder="Phone Number" required>
                 </div>
                 <div class="form-column">
                     <label for="accountsPayableContactEmail">Email Address:</label>
-                    <input type="email" id="accountsPayableContactEmail" name="accountsPayableContactEmail" placeholder="Email Address">
+                    <input type="email" id="accountsPayableContactEmail" name="accountsPayableContactEmail" placeholder="Email Address" required>
                 </div>
             </div>
             <div class="form-navigation">
                 <button type="button" id="nextButton">Next</button>
             </div>
-                                    
-            <!-- More form sections -->
-
-            <!-- Page 2 -->
-
+        </div>
+        <!-- Page 2 -->
+        <div class="form-page" id="page2">
             <!-- Bank Reference -->
             <div class="form-section">
                 <h2>Bank Reference</h2>
                 <div class="form-column">
                     <label for="bankName">Bank Name:</label>
-                    <input type="text" id="bankName" name="bankName" placeholder="Bank Name">
-                
+                    <input type="text" id="bankName" name="bankName" placeholder="Bank Name" required>
+
                     <label for="accountNumber">Account Number:</label>
-                    <input type="text" id="accountNumber" name="accountNumber" placeholder="Account Number">
-                
+                    <input type="text" id="accountNumber" name="accountNumber" placeholder="Account Number" required>
+
                     <label for="bankStreetAddress">Street Address:</label>
-                    <input type="text" id="bankStreetAddress" name="bankStreetAddress" placeholder="Street Address">
-                
-                    <label for="bankCountry">Country:</label>
-                    <select id="bankCountry" name="bankCountry">
-                        <option value="Canada">Canada</option>
-                        <option value="United States">United States</option>
-                    </select>
-                    
-                    <label for="bankState">State:</label>
-                    <select id="bankState" name="bankState">
-                        <!-- State options will be populated based on the selected country -->
-                    </select>
+                    <input type="text" id="bankStreetAddress" name="bankStreetAddress" placeholder="Street Address" required>
                 </div>
                 <div class="form-column">
+                    <label for="bankCountry">Country:</label>
+                    <input type="text" id="bankCountry" name="bankCountry" placeholder="Country" required>
+
+                    <label for="bankState">State:</label>
+                    <input type="text" id="bankState" name="bankState" placeholder="State" required>
+
                     <label for="bankCity">City:</label>
-                    <input type="text" id="bankCity" name="bankCity" placeholder="City">
-                
+                    <input type="text" id="bankCity" name="bankCity" placeholder="City" required>
+                </div>
+                <div class="form-column">
                     <label for="bankContactPersonName">Contact Person Name:</label>
-                    <input type="text" id="bankContactPersonName" name="bankContactPersonName" placeholder="Contact Person Name">
-                
+                    <input type="text" id="bankContactPersonName" name="bankContactPersonName" placeholder="Contact Person Name" required>
+
                     <label for="bankTelephone">Telephone:</label>
-                    <input type="tel" id="bankTelephone" name="bankTelephone" placeholder="Telephone">
-                
+                    <input type="tel" id="bankTelephone" name="bankTelephone" placeholder="Telephone" required>
+
                     <label for="bankEmail">Email:</label>
-                    <input type="email" id="bankEmail" name="bankEmail" placeholder="Email">
+                    <input type="email" id="bankEmail" name="bankEmail" placeholder="Email" required>
                 </div>
             </div>
             <!-- Trade References -->
@@ -264,135 +179,118 @@
                 <div class="form-column">
                     <h3>Trade Reference 1</h3>
                     <label for="tradeReference1Company">Company:</label>
-                    <input type="text" id="tradeReference1Company" name="tradeReference1Company" placeholder="Company">
-                
+                    <input type="text" id="tradeReference1Company" name="tradeReference1Company" placeholder="Company" required>
+
                     <label for="tradeReference1StreetAddress">Street Address:</label>
-                    <input type="text" id="tradeReference1StreetAddress" name="tradeReference1StreetAddress" placeholder="Street Address">
-                
+                    <input type="text" id="tradeReference1StreetAddress" name="tradeReference1StreetAddress" placeholder="Street Address" required>
+
                     <label for="tradeReference1Country">Country:</label>
-                    <select id="tradeReference1Country" name="tradeReference1Country">
-                        <option value="Canada">Canada</option>
-                        <option value="United States">United States</option>
-                    </select>
-                    
-                    <label for="tradeReference1State">State:</label>
-                    <select id="tradeReference1State" name="tradeReference1State">
-                        <!-- State options will be populated based on the selected country -->
-                    </select>
+                    <input type="text" id="tradeReference1Country" name="tradeReference1Country" placeholder="Country" required>
                 </div>
                 <div class="form-column">
+                    <label for="tradeReference1State">State:</label>
+                    <input type="text" id="tradeReference1State" name="tradeReference1State" placeholder="State" required>
+
                     <label for="tradeReference1City">City:</label>
-                    <input type="text" id="tradeReference1City" name="tradeReference1City" placeholder="City">
-                
+                    <input type="text" id="tradeReference1City" name="tradeReference1City" placeholder="City" required>
+
                     <label for="tradeReference1ContactPersonName">Contact Person Name:</label>
-                    <input type="text" id="tradeReference1ContactPersonName" name="tradeReference1ContactPersonName" placeholder="Contact Person Name">
-                
-                    <label for="tradeReference1Telephone">Telephone:</label>
-                    <input type="tel" id="tradeReference1Telephone" name="tradeReference1Telephone" placeholder="Telephone">
-                
-                    <label for="tradeReference1Email">Email:</label>
-                    <input type="email" id="tradeReference1Email" name="tradeReference1Email" placeholder="Email">
+                    <input type="text" id="tradeReference1ContactPersonName" name="tradeReference1ContactPersonName" placeholder="Contact Person Name" required>
                 </div>
-            </div>
-            <div class="form-section">
+                <div class="form-column">
+                    <label for="tradeReference1Telephone">Telephone:</label>
+                    <input type="tel" id="tradeReference1Telephone" name="tradeReference1Telephone" placeholder="Telephone" required>
+
+                    <label for="tradeReference1Email">Email:</label>
+                    <input type="email" id="tradeReference1Email" name="tradeReference1Email" placeholder="Email" required>
+                </div>
                 <!-- Trade Reference 2 -->
                 <div class="form-column">
                     <h3>Trade Reference 2</h3>
                     <label for="tradeReference2Company">Company:</label>
-                    <input type="text" id="tradeReference2Company" name="tradeReference2Company" placeholder="Company">
-                
+                    <input type="text" id="tradeReference2Company" name="tradeReference2Company" placeholder="Company" required>
+
                     <label for="tradeReference2StreetAddress">Street Address:</label>
-                    <input type="text" id="tradeReference2StreetAddress" name="tradeReference2StreetAddress" placeholder="Street Address">
-                
+                    <input type="text" id="tradeReference2StreetAddress" name="tradeReference2StreetAddress" placeholder="Street Address" required>
+
                     <label for="tradeReference2Country">Country:</label>
-                    <select id="tradeReference2Country" name="tradeReference2Country">
-                        <option value="Canada">Canada</option>
-                        <option value="United States">United States</option>
-                    </select>
-                    
-                    <label for="tradeReference2State">State:</label>
-                    <select id="tradeReference2State" name="tradeReference2State">
-                        <!-- State options will be populated based on the selected country -->
-                    </select>
+                    <input type="text" id="tradeReference2Country" name="tradeReference2Country" placeholder="Country" required>
                 </div>
                 <div class="form-column">
+                    <label for="tradeReference2State">State:</label>
+                    <input type="text" id="tradeReference2State" name="tradeReference2State" placeholder="State" required>
+
                     <label for="tradeReference2City">City:</label>
-                    <input type="text" id="tradeReference2City" name="tradeReference2City" placeholder="City">
-                
+                    <input type="text" id="tradeReference2City" name="tradeReference2City" placeholder="City" required>
+
                     <label for="tradeReference2ContactPersonName">Contact Person Name:</label>
-                    <input type="text" id="tradeReference2ContactPersonName" name="tradeReference2ContactPersonName" placeholder="Contact Person Name">
-                
-                    <label for="tradeReference2Telephone">Telephone:</label>
-                    <input type="tel" id="tradeReference2Telephone" name="tradeReference2Telephone" placeholder="Telephone">
-                
-                    <label for="tradeReference2Email">Email:</label>
-                    <input type="email" id="tradeReference2Email" name="tradeReference2Email" placeholder="Email">
+                    <input type="text" id="tradeReference2ContactPersonName" name="tradeReference2ContactPersonName" placeholder="Contact Person Name" required>
                 </div>
-            </div>
-            <div class="form-section">
+                <div class="form-column">
+                    <label for="tradeReference2Telephone">Telephone:</label>
+                    <input type="tel" id="tradeReference2Telephone" name="tradeReference2Telephone" placeholder="Telephone" required>
+
+                    <label for="tradeReference2Email">Email:</label>
+                    <input type="email" id="tradeReference2Email" name="tradeReference2Email" placeholder="Email" required>
+                </div>
                 <!-- Trade Reference 3 -->
                 <div class="form-column">
                     <h3>Trade Reference 3</h3>
                     <label for="tradeReference3Company">Company:</label>
-                    <input type="text" id="tradeReference3Company" name="tradeReference3Company" placeholder="Company">
-                
+                    <input type="text" id="tradeReference3Company" name="tradeReference3Company" placeholder="Company" required>
+
                     <label for="tradeReference3StreetAddress">Street Address:</label>
-                    <input type="text" id="tradeReference3StreetAddress" name="tradeReference3StreetAddress" placeholder="Street Address">
-                
+                    <input type="text" id="tradeReference3StreetAddress" name="tradeReference3StreetAddress" placeholder="Street Address" required>
+
                     <label for="tradeReference3Country">Country:</label>
-                    <select id="tradeReference3Country" name="tradeReference3Country">
-                        <option value="Canada">Canada</option>
-                        <option value="United States">United States</option>
-                    </select>
-                    
-                    <label for="tradeReference3State">State:</label>
-                    <select id="tradeReference3State" name="tradeReference3State">
-                        <!-- State options will be populated based on the selected country -->
-                    </select>
+                    <input type="text" id="tradeReference3Country" name="tradeReference3Country" placeholder="Country" required>
                 </div>
                 <div class="form-column">
+                    <label for="tradeReference3State">State:</label>
+                    <input type="text" id="tradeReference3State" name="tradeReference3State" placeholder="State" required>
+
                     <label for="tradeReference3City">City:</label>
-                    <input type="text" id="tradeReference3City" name="tradeReference3City" placeholder="City">
-                
+                    <input type="text" id="tradeReference3City" name="tradeReference3City" placeholder="City" required>
+
                     <label for="tradeReference3ContactPersonName">Contact Person Name:</label>
-                    <input type="text" id="tradeReference3ContactPersonName" name="tradeReference3ContactPersonName" placeholder="Contact Person Name">
-                
+                    <input type="text" id="tradeReference3ContactPersonName" name="tradeReference3ContactPersonName" placeholder="Contact Person Name" required>
+                </div>
+                <div class="form-column">
                     <label for="tradeReference3Telephone">Telephone:</label>
-                    <input type="tel" id="tradeReference3Telephone" name="tradeReference3Telephone" placeholder="Telephone">
-                
+                    <input type="tel" id="tradeReference3Telephone" name="tradeReference3Telephone" placeholder="Telephone" required>
+
                     <label for="tradeReference3Email">Email:</label>
-                    <input type="email" id="tradeReference3Email" name="tradeReference3Email" placeholder="Email">
+                    <input type="email" id="tradeReference3Email" name="tradeReference3Email" placeholder="Email" required>
                 </div>
             </div>
-            <!-- Authorization Statement -->
+            <!-- Authorization -->
             <div class="form-section">
+                <h2>Authorization</h2>
                 <div class="form-column">
-                    <label for="authorizationStatement">Authorization Statement:</label>
-                    <input type="checkbox" id="authorizationStatement" name="authorizationStatement">
+                    <label for="authorizationStatement">I authorize the verification of the information provided on this form as to my credit and employment.</label>
+                    <input type="checkbox" id="authorizationStatement" name="authorizationStatement" required>
+
+                    <label for="printName">Print Name:</label>
+                    <input type="text" id="printName" name="printName" placeholder="Print Name" required>
+
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" placeholder="Title" required>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
                 </div>
                 <div class="form-column">
-                    <label for="printName">Print Name:</label>
-                    <input type="text" id="printName" name="printName" placeholder="Print Name">
-                
-                    <label for="title">Title:</label>
-                    <input type="text" id="title" name="title" placeholder="Title">
-                
-                    <label for="date">Date:</label>
-                    <input type="date" id="date" name="date">
-                
                     <label for="electronicSignature">Electronic Signature:</label>
-                    <input type="text" id="electronicSignature" name="electronicSignature" placeholder="Electronic Signature">
+                    <input type="text" id="electronicSignature" name="electronicSignature" placeholder="Electronic Signature" required>
                 </div>
             </div>
             <div class="form-navigation">
                 <button type="button" id="previousButton">Previous</button>
                 <button type="submit" id="submitButton">Submit</button>
             </div>
-
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    <script src="script.js"></script>
+        </div>
+    </form>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
