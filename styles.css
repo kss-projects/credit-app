@@ -36,12 +36,12 @@ h2 {
 }
 
 .form-column label {
-    width: 45%;
+    width: 30%;
 }
 
 .form-column input,
 .form-column select {
-    width: 45%;
+    width: 65%;
 }
 
 .form-navigation {
