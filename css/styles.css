@@ -1,0 +1,122 @@
+/* .left{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+.left label {
+    width: 200px;
+  }
+  
+.clear{
+    clear:both;
+  }
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: fade 15s infinite;
+    opacity: 0.5;
+}
+
+@keyframes fade {
+    0%,100% {opacity: 0;}
+    20%,30%,50%,70%,100% {opacity: 1;}
+}
+
+.slideshow .slide:nth-child(1) { animation-delay: 0s; }
+.slideshow .slide:nth-child(2) { animation-delay: 15s; }
+.slideshow .slide:nth-child(3) { animation-delay: 30s; }
+
+form {
+    max-width: 100%;
+    margin: auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    width: 40%;
+}
+
+.input-group input {
+    width: 55%;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.buttons button, input[type="submit"] {
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: #ffffff;
+}
+
+.reset:hover {
+    background: #FF0000;
+}
+
+#prev1:hover, #prev2:hover, #prev3:hover, #prev4:hover, #next1:hover, #next2:hover, #next3:hover, #next4:hover {
+    background: #0000FF;
+}
+
+input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+.buttons {
+    text-align: center;
+}
+*/
+
+#nex-forms .theme-ui-lightness .fc-body{background:#fff !important;color:#444 !important;}#nex-forms .theme-ui-lightness .fc-calendar .fc-row > div > span.fc-date,#nex-forms .theme-ui-lightness .fc-calendar .fc-row > div > div a{color:rgba(153, 153, 153, 0.9) !important;}#nex-forms .theme-ui-lightness .fc-calendar .fc-row > div > div a{background:rgba(231, 231, 231, 0.9) !important;}#nex-forms .theme-ui-lightness .fc-calendar .fc-row{border:medium none !important;box-shadow:0 -1px 0 rgba(153, 153, 153, 0.2) inset !important;}#nex-forms .theme-ui-lightness .fc-calendar .fc-row > div{box-shadow:-1px 0 0 rgba(153, 153, 153, 0.2)  !important;}#nex-forms .theme-ui-lightness .fc-calendar .fc-row > div:first-child{box-shadow:none !important;}#nex-forms .theme-ui-lightness .fc-calendar .fc-row:last-child{box-shadow:none !important;}#nex-forms .theme-ui-lightness .ui-widget{font-family:Trebuchet MS,Tahoma,Verdana,Arial,sans-serif !important;font-size:1.1em !important;}#nex-forms .theme-ui-lightness .ui-widget .ui-widget{font-size:1em !important;}#nex-forms .theme-ui-lightness .ui-widget input,#nex-forms .theme-ui-lightness .ui-widget select,#nex-forms .theme-ui-lightness .ui-widget textarea,#nex-forms .theme-ui-lightness .ui-widget button{font-family:Trebuchet MS,Tahoma,Verdana,Arial,sans-serif !important;font-size:1em !important;}#nex-forms .theme-ui-lightness .ui-widget-content{border:1px solid #dddddd !important;background:#eeeeee url(images/ui-bg_highlight-soft_100_eeeeee_1x100.png) 50% top repeat-x !important;color:#333333 !important;}#nex-forms .theme-ui-lightness .ui-widget-content a{color:#333333 !important;}#nex-forms .theme-ui-lightness .ui-widget-header{border:1px solid #e78f08 !important;background:#f6a828 url(images/ui-bg_gloss-wave_35_f6a828_500x100.png) 50% 50% repeat-x !important;color:#ffffff !important;}#nex-forms .theme-ui-lightness .ui-widget-header a{color:#ffffff !important;}#nex-forms .theme-ui-lightness .ui-state-active .input-label,#nex-forms .theme-ui-lightness .ui-state-default.ui-state-active .input-label{color:#1c94c4 !important;}#nex-forms .theme-ui-lightness .ui-state-default,#nex-forms .theme-ui-lightness .ui-widget-content .ui-state-default,#nex-forms .theme-ui-lightness .ui-widget-header .ui-state-default{border:1px solid #cccccc !important;background:#f6f6f6 url(images/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x !important;color:#1c94c4 !important;}#nex-forms .theme-ui-lightness .ui-state-default a,#nex-forms .theme-ui-lightness .ui-state-default a:link,#nex-forms .theme-ui-lightness .ui-state-default a:visited,#nex-forms .theme-ui-lightness .ui-state-default .input-label{color:#1c94c4 !important;text-decoration:none !important;}#nex-forms .theme-ui-lightness .ui-state-hover,#nex-forms .theme-ui-lightness .ui-widget-content .ui-state-hover,#nex-forms .theme-ui-lightness .ui-widget-header .ui-state-hover,#nex-forms .theme-ui-lightness .ui-state-focus,#nex-forms .theme-ui-lightness .ui-widget-content .ui-state-focus,#nex-forms .theme-ui-lightness .ui-widget-header .ui-state-focus{border:1px solid #fbcb09 !important;background:#fdf5ce url(images/ui-bg_glass_100_fdf5ce_1x400.png) 50% 50% repeat-x !important;color:#c77405 !important;}#nex-forms .theme-ui-lightness .ui-state-hover a,#nex-forms .theme-ui-lightness .ui-state-hover a:hover,#nex-forms .theme-ui-lightness .ui-state-hover a:link,#nex-forms .theme-ui-lightness .ui-state-hover a:visited,#nex-forms .theme-ui-lightness .ui-state-focus a,#nex-forms .theme-ui-lightness .ui-state-focus a:link,#nex-forms .theme-ui-lightness .ui-state-focus a:visited,#nex-forms .theme-ui-lightness .ui-state-focus .input-label,#nex-forms .theme-ui-lightness .ui-state-hover .input-label{color:#c77405 !important;}#nex-forms .theme-ui-lightness .ui-state-active,#nex-forms .theme-ui-lightness .ui-widget-content .ui-state-active,#nex-forms .theme-ui-lightness .ui-widget-header .ui-state-active{border:1px solid #fbcb09 !important;background:#f6ebc1 url(images/ui-bg_glass_100_f6ebc1_1x400.png) 50% 50% repeat-x !important;color:#c77405 !important;}#nex-forms .theme-ui-lightness .ui-state-active a,#nex-forms .theme-ui-lightness .ui-state-active a:link,#nex-forms .theme-ui-lightness .ui-state-active a:visited,#nex-forms .theme-ui-lightness .ui-state-active .input-label{color:#c77405 !important;}#nex-forms .theme-ui-lightness .ui-state-error,#nex-forms .theme-ui-lightness .ui-widget-content .ui-state-error,#nex-forms .theme-ui-lightness .ui-widget-header .ui-state-error,#nex-forms .theme-ui-lightness .ui-state-error-text,#nex-forms .theme-ui-lightness .ui-widget-content .ui-state-error-text,#nex-forms .theme-ui-lightness .ui-widget-header .ui-state-error-text{border:1px solid #f1c40f !important;background:#f1c40f !important;color:#ffffff !important;}#nex-forms .theme-ui-lightness .ui-state-error a,#nex-forms .theme-ui-lightness .ui-state-error-text a,#nex-forms .theme-ui-lightness .ui-state-error a:link,#nex-forms .theme-ui-lightness .ui-state-error-text a:link,#nex-forms .theme-ui-lightness .ui-state-error a:visited,#nex-forms .theme-ui-lightness .ui-state-error-text a:visited,#nex-forms .theme-ui-lightness .ui-state-error .input-label,#nex-forms .theme-ui-lightness .ui-state-error-text .input-label{color:#ffffff !important;}#nex-forms .theme-ui-lightness .ui-state-highlight,#nex-forms .theme-ui-lightness .ui-widget-content .ui-state-highlight,#nex-forms .theme-ui-lightness .ui-widget-header .ui-state-highlight,#nex-forms .theme-ui-lightness .ui-state-highlight-text,#nex-forms .theme-ui-lightness .ui-widget-content .ui-state-highlight-text,#nex-forms .theme-ui-lightness .ui-widget-header .ui-state-highlight-text{border:1px solid #4cae4c !important;background:#dff0d8 !important;color:#333333 !important;}#nex-forms .theme-ui-lightness .ui-state-highlight a,#nex-forms .theme-ui-lightness .ui-state-highlight-text a,#nex-forms .theme-ui-lightness .ui-state-highlight a:link,#nex-forms .theme-ui-lightness .ui-state-highlight-text a:link,#nex-forms .theme-ui-lightness .ui-state-highlight a:visited,#nex-forms .theme-ui-lightness .ui-state-highlight-text a:visited,#nex-forms .theme-ui-lightness .ui-state-highlight .input-label,#nex-forms .theme-ui-lightness .ui-state-highlight-text .input-label{color:#333333 !important;}#nex-forms .theme-ui-lightness .ui-icon{background:url(images/ui-icons_ef8c08_256x240.png) no-repeat 50% 50% !important;}#nex-forms .theme-ui-lightness .ui-widget-overlay{background:#aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x !important;opacity:0.3 !important;filter:Alpha(Opacity=30) !important;}#nex-forms .theme-ui-lightness .ui-widget-shadow{margin:-6px 0 0 -6px !important;padding:5px !important;background:#dddddd url(images/ui-bg_flat_0_dddddd_40x100.png) 50% 50% repeat-x !important;opacity:0.4 !important;filter:Alpha(Opacity=40) !important;border-radius:5px !important;}

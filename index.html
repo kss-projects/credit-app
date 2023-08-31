@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Application</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <div class="slideshow">
+        <div class="slide" style="background-image: url('https://www.rwdoors.com/wp-content/uploads/2022/01/Contemporary-Flush-2C.webp')"></div>
+        <div class="slide" style="background-image: url('https://www.rwdoors.com/wp-content/uploads/2022/01/Grandview3.webp')"></div>
+        <div class="slide" style="background-image: url('https://www.rwdoors.com/wp-content/uploads/2022/01/Premium_Ranch.webp')"></div>
+    </div>
+    <form id="creditApplicationForm">
+        <div class="section" id="section1">
+            <h2>Personal Details</h2>
+            <div class="left">
+                <label for="companyName">Company Name (Required)</label>
+                <input type="text" id="companyName" name="companyName" required>
+            </div>
+            <div class="left">
+                <label for="address">Address (Required)</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="clear">&nbsp;</div>
+            <div class="left">
+                <label for="city">City (Required)</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="left">
+                <label for="state">State (Required)</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="clear">&nbsp;</div>
+            <div class="left">
+                <label for="zip">Zip (Required)</label>
+                <input type="text" id="zip" name="zip" required>
+            </div>
+            <div class="left">
+                <label for="telephone">Telephone (Required)</label>
+                <input type="text" id="telephone" name="telephone" required>
+            </div>
+            <div class="clear">&nbsp;</div>
+            <div class="buttons">
+                <button type="button" class="reset">Reset</button>
+                <button type="button" id="next1">Next</button>
+            </div>
+        </div>
+        <!-- ... other sections ... -->
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
