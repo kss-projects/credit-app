@@ -6,10 +6,12 @@ body {
 
 form {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 1.5rem auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 10px;
+    background: #f7f7f7;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
 }
 
 h2 {
@@ -17,7 +19,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.form-page {
+/* .form-page {
     display: none;
 }
 
@@ -64,5 +66,35 @@ h2 {
 
 .form-navigation button:not(:disabled):hover {
     background-color: #0056b3;
+} */
+/* Custom styles applied to form */
+
+.form-label {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #4a4b4e;
+    font-weight: 600;
 }
 
+::placeholder
+{
+    color: #e6e7e9;
+    font-size: 14px;
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+.form-select{
+    font-size: 14px;
+    color: #6c757d;
+}
+.custom-control-label{
+    font-size: 12px;
+    color: #4a4b4e;
+}
+/* Helper classes */
+.cursor-pointer{
+    cursor: pointer;
+}
