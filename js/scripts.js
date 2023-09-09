@@ -90,3 +90,68 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // ... [Your existing code above]
+
+    // 1. Form Validation
+    function validatePage(page) {
+        const requiredFields = page.querySelectorAll('[required]');
+        for (let field of requiredFields) {
+            if (!field.value) {
+                alert("Please fill out all required fields before proceeding.");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // 2. Dynamic content loading
+    const deliveryOptions = form.querySelector('[name="deliveryOption"]');
+    const shippingAddressSection = form.querySelector('#shippingAddressSection');
+    if (deliveryOptions) {
+        deliveryOptions.addEventListener('change', function() {
+            if (this.value === 'Delivery') {
+                shippingAddressSection.style.display = 'block';
+            } else {
+                shippingAddressSection.style.display = 'none';
+            }
+        });
+    }
+
+    // Handle next button click with validation
+    nextButton.addEventListener('click', function() {
+        if (!validatePage(pages[currentPage])) return;
+
+        pages[currentPage].classList.remove('active');
+        currentPage++;
+        pages[currentPage].classList.add('active');
+        previousButton.disabled = false;
+
+        if (currentPage === pages.length - 1) {
+            nextButton.disabled = true;
+            submitButton.disabled = false;
+        }
+    });
+
+    // 3. AJAX form submission
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let formData = new FormData(form);
+        fetch('YOUR_SERVER_ENDPOINT_HERE', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            alert('Form submitted successfully!');
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error submitting the form.');
+        });
+    });
+});
